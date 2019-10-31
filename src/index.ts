@@ -1,1 +1,1 @@
-export * from "./st-rm-rf";
+export * from "./function/st-rm-rf";

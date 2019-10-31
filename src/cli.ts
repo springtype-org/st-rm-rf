@@ -1,35 +1,17 @@
 #!/usr/bin/env node
 
-import {removePathOrFile} from "./st-rm-rf";
+import {deletePathOrFile} from "./function/st-rm-rf";
+import chalk from "chalk";
 
-const path = require('path');
-const chalk = require('chalk');
-const fs = require('fs');
-
-const pathsToRemove = process.argv.slice(2);
+const pathsToDelete = process.argv.slice(2);
 
 (async () => {
-
-    if (pathsToRemove.length == 0) {
-
-        console.log(chalk.red('Nothing to remove.'));
-
+    if (pathsToDelete.length == 0) {
+        console.log(chalk.red('Nothing to delete.'));
     } else {
-
-        console.log(chalk.green('Start deleting paths:', pathsToRemove));
-
-        for (let i = 0; i < pathsToRemove.length; i++) {
-
-            const pathToRemove = path.resolve(pathsToRemove[i]);
-
-            if (fs.existsSync(pathToRemove)) {
-
-                if (await removePathOrFile(pathToRemove, true)) {
-                    console.log(chalk.cyan(`Removed:`), chalk.white(pathToRemove))
-                } else {
-                    console.log(chalk.red(`Error removing:  ${pathToRemove}`))
-                }
-            }
+        console.log(chalk.green('Start deleting paths:'), pathsToDelete);
+        for (let pathToDelete of pathsToDelete) {
+            deletePathOrFile(pathToDelete);
         }
     }
 })();
