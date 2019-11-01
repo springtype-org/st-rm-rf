@@ -1,6 +1,6 @@
 {
     "name": "st-rm-rf",
-    "version": "2.0.0-alpha.1",
+    "version": "2.0.0-alpha.3",
     "publishConfig": {
         "access": "public"
     },
@@ -37,9 +37,9 @@
         "chalk": "^2.4.2"
     },
     "devDependencies": {
-        "@types/node": "^12.11.7",
-        "node": "^12.12.0",
-        "typescript": "^3.3.4000",
-        "st-run": "2.0.0-alpha.14"
+        "@types/node": "^12.12.5",
+        "node": "^12.13.0",
+        "typescript": "^3.6.4",
+        "st-run": "2.0.0-alpha.18"
     }
 }

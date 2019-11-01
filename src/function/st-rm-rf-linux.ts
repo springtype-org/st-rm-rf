@@ -1,11 +1,11 @@
-import {IDeletePathOrFile} from "../interface/ideletefileorpath";
-import {relative, resolve} from "path";
-import {execute} from "./execute";
+import { execSync } from "child_process";
+import { relative, resolve } from "path";
+import { IDeletePathOrFile } from "../interface/idelete-path-or-file";
 
 export const deletePathOrFile: IDeletePathOrFile = {
-    relative,
-    resolve,
-    deletePathOrFile: (deletePath: string) => {
-        execute(`rm -rf "${deletePath}"`)
-    }
+  relative,
+  resolve,
+  deletePathOrFile: (deletePath: string) => {
+    execSync(`rm -rf "${deletePath}"`);
+  },
 };
