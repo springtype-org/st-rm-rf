@@ -12,8 +12,7 @@ export const deletePathOrFile = (deletePath: string, printError: boolean = true)
     const currentPath = process.cwd();
     deletePath = osDelete.resolve(currentPath, deletePath);
     if (!existsSync(deletePath)) {
-      console.log(chalk.red(`[!] Path does not exist: ${osDelete.relative(currentPath, deletePath)}`));
-      throw new Error('Path does not exist');
+      console.log(chalk.yellow(`[!] Warning: Path does not exist: ${osDelete.relative(currentPath, deletePath)}`));
     }
     const isFolder = isDirectory(deletePath);
 
@@ -21,8 +20,7 @@ export const deletePathOrFile = (deletePath: string, printError: boolean = true)
     osDelete.deletePathOrFile(deletePath);
   } catch (err) {
     if (printError) {
-      console.log(chalk.red("[!] Error: ") + err);
-      throw err;
+      console.log(chalk.yellow("[!] Warning: ") + err);
     }
   }
 };
