@@ -13,7 +13,7 @@ export const deletePathOrFile = (deletePath: string, printError: boolean = true)
     deletePath = osDelete.resolve(currentPath, deletePath);
     if (!existsSync(deletePath)) {
       console.log(chalk.red(`[!] Path does not exist: ${osDelete.relative(currentPath, deletePath)}`));
-      process.exit(1);
+      throw new Error('Path does not exist');
     }
     const isFolder = isDirectory(deletePath);
 
