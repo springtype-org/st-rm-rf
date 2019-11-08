@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import chalk from "chalk";
 import { deletePathOrFile } from "./function/st-rm-rf";
 
