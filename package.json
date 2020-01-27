@@ -1,6 +1,6 @@
 {
     "name": "st-rm-rf",
-    "version": "2.0.0-alpha.8",
+    "version": "2.0.0-alpha.10",
     "publishConfig": {
         "access": "public"
     },
@@ -20,7 +20,8 @@
         "node": ">=10"
     },
     "bundledDependencies": [
-        "chalk"
+        "chalk",
+        "loading-cli"
     ],
     "bin": {
         "st-rm-rf": "./cli.js"
@@ -34,12 +35,11 @@
     },
     "homepage": "https://springtype.org",
     "dependencies": {
-        "chalk": "^2.4.2"
+        "chalk": "^2.4.2",
+        "loading-cli": "^1.1.0"
     },
     "devDependencies": {
         "@types/node": "^12.12.5",
-        "node": "^12.13.0",
-        "typescript": "^3.6.4",
-        "st-run": "2.0.0-alpha.18"
+        "typescript": "^3.6.4"
     }
 }

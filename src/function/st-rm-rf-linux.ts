@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 import { relative, resolve } from "path";
-import { IDeletePathOrFile } from "../interface/idelete-path-or-file";
+import { IDeletePathOrFile } from "../interface/i-delete-path-or-file";
 
 export const deletePathOrFile: IDeletePathOrFile = {
   relative,

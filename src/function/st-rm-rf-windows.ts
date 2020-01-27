@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 import { win32 } from "path";
-import { IDeletePathOrFile } from "../interface/idelete-path-or-file";
+import { IDeletePathOrFile } from "../interface/i-delete-path-or-file";
 import { isDirectory } from "./is-directory";
 
 const resolve = win32.resolve;
