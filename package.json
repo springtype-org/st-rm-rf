@@ -1,6 +1,6 @@
 {
     "name": "st-rm-rf",
-    "version": "2.0.0-alpha.11",
+    "version": "2.0.0-alpha.12",
     "publishConfig": {
         "access": "public"
     },
