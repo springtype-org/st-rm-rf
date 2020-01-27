@@ -1,6 +1,6 @@
 {
     "name": "st-rm-rf",
-    "version": "2.0.0-alpha.10",
+    "version": "2.0.0-alpha.11",
     "publishConfig": {
         "access": "public"
     },
@@ -20,8 +20,7 @@
         "node": ">=10"
     },
     "bundledDependencies": [
-        "chalk",
-        "loading-cli"
+        "chalk"
     ],
     "bin": {
         "st-rm-rf": "./cli.js"
@@ -35,8 +34,7 @@
     },
     "homepage": "https://springtype.org",
     "dependencies": {
-        "chalk": "^2.4.2",
-        "loading-cli": "^1.1.0"
+        "chalk": "^2.4.2"
     },
     "devDependencies": {
         "@types/node": "^12.12.5",
