@@ -1,4 +1,4 @@
-import chalk from "chalk";
+const chalk = require("chalk");
 import {existsSync} from "fs";
 import {platform} from "os";
 import {IDeletePathOrFile} from "../interface/i-delete-path-or-file";

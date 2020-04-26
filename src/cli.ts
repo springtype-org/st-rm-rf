@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import chalk from "chalk";
+const chalk = require("chalk");
 import {deletePathOrFile} from "./function/st-rm-rf";
 
 const pathsToDelete = process.argv.slice(2);
