@@ -14,7 +14,9 @@
         "url": "git+https://github.com/springtype-org/springtype.git"
     },
     "scripts": {
-        "build": "st-run st-rm-rf dist ++ system:tsc ++ st-cp README.md package.json node_modules dist",
+        "prebuild": "npx st-rm-rf dist",
+        "build": "tsc",
+        "postbuild" : "npx st-cp README.md package.json node_modules dist",
         "test": "ts-node test.ts"
     },
     "engines": {
